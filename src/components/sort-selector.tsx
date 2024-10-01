@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Check, ChevronDown, ChevronUp, ArrowUpDown } from "lucide-react";
 import {
   useCountries,

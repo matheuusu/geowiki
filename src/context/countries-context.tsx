@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useReducer,
-  ReactNode,
-  act,
-} from "react";
+import React, { createContext, useContext, useReducer, ReactNode } from "react";
 
 export interface Country {
   name: {
