@@ -1,50 +1,87 @@
-# React + TypeScript + Vite
+# GeoWiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição do Projeto
 
-Currently, two official plugins are available:
+GeoWiki é uma aplicação web desenvolvida em React que consome a API RestCountries para exibir informações sobre países ao redor do mundo. Esta aplicação oferece uma interface intuitiva para explorar dados geográficos, demográficos e culturais de diversos países.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+1. **Listagem de Países**: Na página inicial, a aplicação exibe as bandeiras de todos os países disponíveis na API.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Filtros**:
+   - Por região e sub-região
+   - Por população (faixas populacionais)
 
-- Configure the top-level `parserOptions` property like this:
+3. **Ordenação**:
+   - Nome (Ordem alfabética)
+   - População
+   - Área do país
+   - Suporte para ordem crescente e decrescente
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+4. **Busca por nome de país especifico**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+5. **Detalhes do País**: Ao clicar em uma bandeira, o usuário é direcionado para uma página de detalhes que mostra informações mais específicas sobre o país selecionado, incluindo:
+   - Nome oficial
+   - Capital
+   - Região e Sub-região
+   - Idiomas falados
+   - Moedas utilizadas
+   - População
+   - Área territorial
+   - Fuso horário
+   - Domínio de internet
+   - Código de discagem internacional
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+6. **Navegação Intuitiva**: A aplicação utiliza React Router para permitir uma navegação suave entre a lista de países e as páginas de detalhes.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+7. **Design Responsivo**: A interface é adaptável a diferentes tamanhos de tela, proporcionando uma boa experiência tanto em dispositivos móveis quanto em desktops.
+
+## Tecnologias Utilizadas
+
+- **Vite**: Ferramenta de build para desenvolvimento.
+- **React**: Biblioteca javascript para construção de interfaces.
+- **TypeScript**: Superset do javascript que adiciona tipagem estática.
+- **Tailwind CSS**: Frameworkd de CSS utilitário para estilização.
+- **React Router**: Biblioteca para roteamento de páginas no React.
+- **React Context**: Usado para gerencias o estado global dos países.
+
+## Como Iniciar o Projeto
+
+Siga estas etapas para executar o projeto em sua máquina local:
+
+1. **Clone o repositório**
+   ```
+   git clone https://github.com/matheuusu/geowiki.git
+   cd geowiki
+   ```
+
+2. **Instale as dependências**
+   ```
+   npm install
+   ```
+
+3. **Inicie o servidor de desenvolvimento**
+   ```
+   npm run dev
+   ```
+
+4. **Acesse a aplicação**
+   Abra seu navegador e acesse `http://localhost:5173/`
+
+## Estrutura do Projeto
+
+- `src/components`: Contém os componentes React reutilizáveis.
+- `src/context`: Inclui o contexto React para gerenciamento de estado global.
+- `src/pages`: Contém as páginas principais da aplicação.
+
+## Contribuindo
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+Desenvolvido por [Matheus Silva]
