@@ -1,9 +1,5 @@
-import { Sidebar } from "./components/sidebar";
+import { AppRoutes } from "./routes";
 
 export function App() {
-  return (
-    <div>
-      <Sidebar />
-    </div>
-  );
+  return <AppRoutes />;
 }
