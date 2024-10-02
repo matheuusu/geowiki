@@ -4,6 +4,10 @@
 
 GeoWiki é uma aplicação web desenvolvida em React que consome a API RestCountries para exibir informações sobre países ao redor do mundo. Esta aplicação oferece uma interface intuitiva para explorar dados geográficos, demográficos e culturais de diversos países.
 
+## Live URL
+
+**Link**: https://geowiki.vercel.app/countries
+
 ## Funcionalidades
 
 1. **Listagem de Países**: Na página inicial, a aplicação exibe as bandeiras de todos os países disponíveis na API.
