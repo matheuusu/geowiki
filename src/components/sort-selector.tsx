@@ -59,7 +59,7 @@ export function SortSelector() {
       <div className="flex items-center gap-2">
         <label
           htmlFor="sort-options-view-button"
-          className="text-sm tracking-wide font-medium"
+          className="text-xs tracking-wide font-medium"
         >
           Organizar por:
         </label>
@@ -72,8 +72,8 @@ export function SortSelector() {
             onChange={handleToggle}
           />
           <div
-            className="flex items-center justify-between w-52 p-2 rounded-md 
-            cursor-pointer text-white bg-customGreen-900"
+            className="flex items-center justify-between w-48 p-1 rounded-md 
+            cursor-pointer text-white bg-customGreen-900 text-xs"
             onClick={handleToggle}
           >
             <div className="flex items-center gap-2 font-medium">
@@ -90,13 +90,13 @@ export function SortSelector() {
           </div>
           {isOpen && (
             <ul
-              className="absolute z-10 w-52 mt-1 bg-customGreen-600 border
+              className="absolute z-10 w-48 mt-1 bg-customGreen-600 border
              border-customGreen-900/10 rounded-md shadow-lg max-h-60 overflow-auto left-0"
             >
               {sortOptions.map((option) => (
                 <li
                   key={option.value}
-                  className="flex items-center p-2 cursor-pointer hover:bg-customGreen-300"
+                  className="flex items-center p-1 cursor-pointer hover:bg-customGreen-300 text-sm"
                   onClick={() => handleSelect(option)}
                 >
                   <span>{option.label}</span>

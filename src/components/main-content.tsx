@@ -29,24 +29,22 @@ export function MainContent() {
       <div className="grid gap-8">
         <div className="grid gap-3">
           <div className="grid md:flex justify-between items-center">
-            <p className="text-customGreen-900 font-medium text-center">
+            <p className="text-customGreen-900 text-sm font-medium text-center sr-only sm:not-sr-only">
               <strong className="bg-amber-200 ">
                 {state.filteredCountries.length}
               </strong>{" "}
               Paises encontrados
             </p>
-            <div className="flex bg-white w-full sm:w-80 rounded shadow-sm justify-between">
-              <div className="px-3 py-1.5">
-                <input
-                  type="text"
-                  className="bg-transparent flex-1 outline-none font-medium text-sm placeholder"
-                  placeholder="Pesquisar paises..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
-              </div>
-              <div className="bg-customGreen-900 rounded-e px-2.5 flex items-center">
-                <Search className="text-white size-4" />
+            <div className="flex bg-white w-72 sm:w-auto rounded shadow-sm overflow-hidden">
+              <input
+                type="text"
+                className="w-full bg-transparent outline-none font-medium text-sm px-3 py-2"
+                placeholder="Pesquisar paises..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+              />
+              <div className="bg-customGreen-900 flex items-center px-1.5 text-white">
+                <Search />
               </div>
             </div>
           </div>
